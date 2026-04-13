@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Nexus Video Hub
 
-# Run and deploy your AI Studio app
+Este é um hub de vídeos do YouTube com geração automática de artigos SEO usando a API do Groq.
 
-This contains everything you need to run your app locally.
+## 🚀 Como rodar o projeto localmente
 
-View your app in AI Studio: https://ai.studio/apps/986f4bd3-92a8-4fe6-b7b8-74587c9f4d0a
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-seu-repositorio>
+   cd <nome-da-pasta>
+   ```
 
-## Run Locally
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-**Prerequisites:**  Node.js
+3. **Configure as variáveis de ambiente:**
+   - Crie um arquivo `.env` na raiz do projeto.
+   - Copie o conteúdo de `.env.example` para o `.env`.
+   - Adicione suas chaves do Firebase e a `VITE_GROQ_API_KEY`.
 
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🌐 Deploy no Netlify via GitHub
+
+1. Suba este código para um repositório no seu **GitHub**.
+2. No **Netlify**, clique em "Add new site" > "Import an existing project".
+3. Conecte com seu GitHub e selecione este repositório.
+4. **Configurações de Build:**
+   - Build Command: `npm run build`
+   - Publish directory: `dist`
+5. **Variáveis de Ambiente (Site Settings > Environment variables):**
+   - Adicione todas as variáveis do seu `.env` (Firebase e Groq).
+
+## 🛠️ Tecnologias
+- React + Vite
+- Tailwind CSS
+- Firebase Firestore
+- Groq SDK (IA)
+- Framer Motion
