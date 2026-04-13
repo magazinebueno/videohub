@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Video": {
+      "title": "Video",
+      "description": "A video saved in the hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "categoria": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "url", "categoria"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "A video category",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" }
+      },
+      "required": ["name"]
+    }
+  },
+  "firestore": {
+    "/videos/{videoId}": {
+      "schema": "Video",
+      "description": "Collection of saved videos"
+    },
+    "/categories/{categoryId}": {
+      "schema": "Category",
+      "description": "Collection of video categories"
+    }
+  }
+}
